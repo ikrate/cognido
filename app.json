@@ -1,18 +1,23 @@
 {
   "expo": {
-    "name": "intellinote",
-    "slug": "intellinote",
+    "name": "Cognido",
+    "slug": "cognido",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "intellinote",
+    "scheme": "cognido",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/images/icon.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.claycroc.cognido",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0A1224",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -28,15 +33,21 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#0A1224",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 120
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d24c3fc9-829f-48cc-a89d-243a4cdfd641"
+      }
     }
   }
 }
