@@ -17,7 +17,7 @@ import { SmartInput } from '@/components/smart-input';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { TodoItem } from '@/components/todo-item';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+import { MaxContentWidth, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 import { loadTodos, saveTodos } from '@/services/storage';
 import { Category, FilterStatus, Priority, Todo } from '@/types/todo';
@@ -164,7 +164,7 @@ export default function HomeScreen() {
           styles.scrollContent,
           {
             paddingTop: Spacing.two,
-            paddingBottom: insets.bottom + BottomTabInset + 88, // extra room for floating + button
+            paddingBottom: Math.max(insets.bottom, 16) + 96, // extra room for floating + button
           },
         ]}>
         <View style={styles.container}>
@@ -267,7 +267,7 @@ export default function HomeScreen() {
         pointerEvents="box-none"
         style={[
           styles.fabWrapper,
-          { bottom: insets.bottom + BottomTabInset + 16 },
+          { bottom: Math.max(insets.bottom, 16) + 16 },
         ]}>
         <Pressable
           accessibilityRole="button"
